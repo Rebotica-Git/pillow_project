@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageFilter & ImageEnhance Filters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #171717;
+            color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f7598d;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #1e1e1e;
+            border: 1px solid #f7598d;
+        }
+
+        th, td {
+            padding: 12px 20px;
+            text-align: left;
+            border: 1px solid #f7598d;
+        }
+
+        th {
+            background-color: #f7598d;
+            color: #171717;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2c2c2c;
+        }
+
+
+        code {
+            background-color: #2c2c2c;
+            color: #f9f9f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <h1>ImageFilter & ImageEnhance Filters</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Категория</th>
+                <th>Фильтр</th>
+                <th>Описание</th>
+                <th>Пример использования</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="11">ImageFilter</td>
+                <td>BLUR</td>
+                <td>Размытие изображения.</td>
+                <td><code>image.filter(ImageFilter.BLUR)</code></td>
+            </tr>
+            <tr>
+                <td>CONTOUR</td>
+                <td>Выделение контуров объекта.</td>
+                <td><code>image.filter(ImageFilter.CONTOUR)</code></td>
+            </tr>
+            <tr>
+                <td>DETAIL</td>
+                <td>Улучшение деталей.</td>
+                <td><code>image.filter(ImageFilter.DETAIL)</code></td>
+            </tr>
+            <tr>
+                <td>EDGE_ENHANCE</td>
+                <td>Усиление краёв.</td>
+                <td><code>image.filter(ImageFilter.EDGE_ENHANCE)</code></td>
+            </tr>
+            <tr>
+                <td>EDGE_ENHANCE_MORE</td>
+                <td>Более сильное усиление краёв.</td>
+                <td><code>image.filter(ImageFilter.EDGE_ENHANCE_MORE)</code></td>
+            </tr>
+            <tr>
+                <td>EMBOSS</td>
+                <td>Эффект гравировки.</td>
+                <td><code>image.filter(ImageFilter.EMBOSS)</code></td>
+            </tr>
+            <tr>
+                <td>FIND_EDGES</td>
+                <td>Поиск краёв.</td>
+                <td><code>image.filter(ImageFilter.FIND_EDGES)</code></td>
+            </tr>
+            <tr>
+                <td>SHARPEN</td>
+                <td>Повышение резкости.</td>
+                <td><code>image.filter(ImageFilter.SHARPEN)</code></td>
+            </tr>
+            <tr>
+                <td>SMOOTH</td>
+                <td>Сглаживание изображения.</td>
+                <td><code>image.filter(ImageFilter.SMOOTH)</code></td>
+            </tr>
+            <tr>
+                <td>GaussianBlur</td>
+                <td>Размытие по Гауссу с заданным радиусом.</td>
+                <td><code>image.filter(ImageFilter.GaussianBlur(radius=5))</code></td>
+            </tr>
+            <tr>
+                <td>UnsharpMask</td>
+                <td>Маска нерезкости для повышения чёткости.</td>
+                <td><code>image.filter(ImageFilter.UnsharpMask(radius=2, percent=150, threshold=3))</code></td>
+            </tr>
+            <tr>
+                <td rowspan="4">ImageEnhance</td>
+                <td>Brightness</td>
+                <td>Изменение яркости. 1.0 — оригинал, меньше 1.0 — темнее, больше 1.0 — светлее.</td>
+                <td><code>ImageEnhance.Brightness(image).enhance(1.5)</code></td>
+            </tr>
+            <tr>
+                <td>Contrast</td>
+                <td>Изменение контрастности.</td>
+                <td><code>ImageEnhance.Contrast(image).enhance(2.0)</code></td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>Настройка насыщенности цветов.</td>
+                <td><code>ImageEnhance.Color(image).enhance(1.5)</code></td>
+            </tr>
+            <tr>
+                <td>Sharpness</td>
+                <td>Изменение резкости.</td>
+                <td><code>ImageEnhance.Sharpness(image).enhance(2.0)</code></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
